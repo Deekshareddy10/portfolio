@@ -1,0 +1,162 @@
+.tv-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Config row */
+.tv-config {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.tv-config-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tv-config-key {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+}
+
+.tv-config-val {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-sub);
+}
+
+/* Live metrics */
+.tv-metrics {
+  display: flex;
+  gap: 22px;
+}
+
+.tv-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tv-metric-key {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.tv-metric-val {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Canvas */
+.tv-canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  display: block;
+}
+
+/* Legend */
+.tv-legend {
+  display: flex;
+  gap: 16px;
+}
+
+.tv-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.tv-legend-line {
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+/* Progress bar */
+.tv-progress-wrap {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.tv-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.08s linear;
+}
+
+/* Footer */
+.tv-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tv-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-running {
+  color: var(--accent);
+  animation: statusPulse 1.4s ease-in-out infinite;
+}
+
+.status-done {
+  color: var(--accent-2);
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* Train Again button */
+.tv-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 144, 74, 0.28);
+  background: rgba(200, 144, 74, 0.07);
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  letter-spacing: 0.04em;
+}
+
+.tv-btn:hover:not(:disabled) {
+  background: rgba(200, 144, 74, 0.16);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.tv-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.tv-btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}

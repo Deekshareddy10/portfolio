@@ -1,0 +1,200 @@
+.interests-section {
+  border-top: 1px solid var(--border);
+}
+
+/* Layout */
+.snake-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Canvas */
+.snake-canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.snake-canvas {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  display: block;
+}
+
+.snake-hint {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+/* D-pad controls */
+.snake-dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.dpad-row {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.dpad-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(200, 144, 74, 0.08);
+  border: 1px solid rgba(200, 144, 74, 0.22);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  line-height: 1;
+}
+
+.dpad-btn:hover {
+  background: rgba(200, 144, 74, 0.18);
+  transform: scale(1.1);
+}
+
+.dpad-btn:active {
+  transform: scale(0.95);
+}
+
+.dpad-center {
+  /* Down button in the center slot */
+}
+
+/* Side panel */
+.snake-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 300px;
+}
+
+/* Active card */
+.snake-active-card {
+  background: color-mix(in srgb, var(--card-color) 7%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--card-color) 35%, transparent);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  animation: cardPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes cardPop {
+  from { opacity: 0; transform: scale(0.9) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.active-emoji {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.active-label {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--card-color);
+  margin-bottom: 10px;
+}
+
+.active-desc {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+/* Idle state */
+.snake-idle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  min-height: 160px;
+}
+
+.idle-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+/* Eaten tracker */
+.eaten-tracker {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.eaten-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.eaten-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.eaten-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--pill-color) 35%, transparent);
+  background: color-mix(in srgb, var(--pill-color) 8%, transparent);
+  color: var(--pill-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  animation: pillIn 0.3s ease;
+}
+
+@keyframes pillIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+  .snake-layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .snake-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .snake-side {
+    width: 100%;
+  }
+}

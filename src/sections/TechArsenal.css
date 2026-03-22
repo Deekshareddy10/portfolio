@@ -1,0 +1,194 @@
+.tech-section {
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Terminal window ---- */
+.terminal-wrap {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: #0a0a0a;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04),
+    0 24px 60px rgba(0,0,0,0.5),
+    0 0 40px rgba(200,144,74,0.04);
+}
+
+/* Title bar */
+.term-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #111;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap;
+}
+
+.term-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.term-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+
+.term-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+}
+
+/* Category tabs inside titlebar */
+.term-tabs {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.term-tab {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.term-tab:hover {
+  color: var(--tab-color);
+  border-color: color-mix(in srgb, var(--tab-color) 35%, transparent);
+}
+
+.term-tab.active {
+  color: var(--tab-color);
+  border-color: var(--tab-color);
+  background: color-mix(in srgb, var(--tab-color) 10%, transparent);
+}
+
+/* Terminal body */
+.term-body {
+  padding: 20px 24px 24px;
+  min-height: 380px;
+  max-height: 480px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.term-body::-webkit-scrollbar { width: 4px; }
+.term-body::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+}
+
+/* Prompt line */
+.term-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.term-prompt {
+  flex-shrink: 0;
+}
+
+.prompt-user  { color: var(--accent-2); }
+.prompt-at    { color: var(--text-muted); }
+.prompt-host  { color: var(--accent); }
+.prompt-sep   { color: var(--text-muted); }
+
+.term-cmd {
+  color: var(--text);
+  white-space: pre;
+}
+
+/* Blinking cursor */
+.term-blink-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--text);
+  margin-left: 1px;
+  vertical-align: middle;
+  animation: termBlink 1s step-end infinite;
+}
+
+@keyframes termBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Output */
+.term-blank { height: 6px; }
+
+.term-header {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+}
+
+.term-ready {
+  margin-top: 4px;
+}
+
+/* Skill lines */
+.term-skill-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  color: var(--text-sub);
+  animation: skillFadeIn 0.25s ease;
+  font-size: 0.8rem;
+  white-space: pre;
+  flex-wrap: nowrap;
+}
+
+@keyframes skillFadeIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.skill-name {
+  color: var(--text);
+  min-width: 160px;
+}
+
+.skill-bar {
+  color: var(--skill-color);
+  opacity: 0.85;
+}
+
+.skill-pct {
+  color: var(--skill-color);
+  font-weight: 600;
+  min-width: 46px;
+}
+
+.skill-level {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .term-tabs { display: none; }
+  .term-title { text-align: left; }
+  .term-skill-line { font-size: 0.68rem; }
+  .skill-name { min-width: 110px; }
+  .term-body { font-size: 0.72rem; padding: 14px 16px; }
+}
