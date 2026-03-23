@@ -83,7 +83,7 @@ const CERTS = [
   {
     name: 'Machine Learning Crash Course',
     issuer: 'Google',
-    url: '/certs/google.jpg',
+    url: 'https://developers.google.com/profile/badges/playlists/machine-learning-crash-course/llms',
     color: '#c8904a',
   },
   {
