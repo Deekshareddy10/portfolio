@@ -11,16 +11,16 @@ const STATS = [
 const EXPERIENCE = [
   {
     year: 'Mar 2025 – Present',
-    title: 'Graduate Assistant, Software Engineer',
+    title: 'Software Engineer, Graduate Assistant',
     org: 'University of Colorado Denver',
-    desc: 'Building and maintaining software systems as part of my graduate assistantship, contributing to research infrastructure and engineering workflows.',
+    desc: 'Engineered and maintained a scalable course registration system serving 100+ students, integrating ML models for student performance prediction and analytics to support data-driven academic decisions. Refactored Python codebases across multiple modules and mentored 60+ students in software best practices including code reviews, Git workflows, and debugging.',
     type: 'work',
   },
   {
     year: 'Mar 2025 – Jun 2025',
-    title: 'Student Web Accessibility Representative',
+    title: 'Web Accessibility Engineer',
     org: 'University of Colorado Denver',
-    desc: 'Audited university web platforms for WCAG 2.1 compliance, identified accessibility gaps, and coordinated remediation efforts across departments.',
+    desc: 'Resolved 10+ accessibility issues including semantic HTML, ARIA labels, and form validation to meet WCAG 2.1 AA & AAA standards using Siteimprove. Improved keyboard navigation and screen-reader support, resulting in improved search visibility and accessibility compliance for university web pages.',
     type: 'work',
   },
   {
