@@ -4,6 +4,17 @@ import './Projects.css'
 const PROJECTS = [
   // ── FEATURED ──────────────────────────────────────────────
   {
+    id: 11,
+    title: 'CivicLens — LynxHack 2026 · 4th Place',
+    desc: 'Hackathon winner at LynxHack 2026 (UCD, Denver). Policymakers upload any policy document; CivicLens pulls live economic and demographic data, runs three specialised AI agents (Economist, Urban Planner, Equity Analyst), and renders projected impact on an interactive 3D Mapbox map.',
+    tags: ['Multi-Agent AI', 'Mapbox GL', 'RAG', 'Python', 'React'],
+    image: '/projects/civiclens.png',
+    github: 'https://github.com/Deekshareddy10/lynxhack_dtl',
+    demo: 'https://youtu.be/z7sHBukYB08?si=ZPFJbarp4ORTLX6n',
+    accent: '#7ab0a0',
+    featured: true,
+  },
+  {
     id: 1,
     title: 'Heterogeneity-Aware Multimodal Learning',
     desc: 'Early disease detection via multimodal fusion that accounts for heterogeneous patient data across imaging and clinical modalities. Research-grade system with novel gated fusion architecture.',
@@ -236,7 +247,7 @@ export default function Projects() {
       <div className="section-label">what i've shipped</div>
       <h2 className="section-title">Projects</h2>
       <p className="section-subtitle">
-        15+ projects total. Here's a curated selection — from AI research to full-stack builds.
+        15+ projects across AI research, full-stack builds, and hackathon wins.
       </p>
 
       {/* Featured grid */}
