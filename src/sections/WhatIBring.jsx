@@ -51,22 +51,22 @@ const EVIDENCE = [
     icon: '🎓',
     accent: '#d4a853',
     bullets: [
-      'GPA 3.9 — MS Computer Science, UCD',
+      'GPA 3.8 — MS Computer Science, UCD',
       '5 certifications: NVIDIA, Databricks, HuggingFace',
       'Graduate Assistant SWE + ISA President simultaneously',
     ],
     tag: 'GPA 3.9 · May 2026',
   },
   {
-    claim: 'Reliability You Can Count On',
-    icon: '🤝',
-    accent: '#a78bfa',
+    claim: "Won't Stop Until It's Done",
+    icon: '🔥',
+    accent: '#c47a5a',
     bullets: [
-      'Web Accessibility Rep — WCAG audits across university platforms',
-      'ISA President: leading community of 30+ nationalities',
-      'Documents work, communicates early, ships on time',
+      "Physically can't postpone — won't sleep until the bug is fixed",
+      'Perfectionist by nature: detail-oriented down to edge cases',
+      'ISA President + Data Engineer + research — simultaneously',
     ],
-    tag: 'Leader · Rep · GA',
+    tag: 'Hard worker · Perfectionist',
   },
 ]
 

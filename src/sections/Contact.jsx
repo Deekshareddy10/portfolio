@@ -305,7 +305,7 @@ export default function Contact() {
 
       {/* Footer */}
       <footer className="site-footer reveal">
-        <p>Built with React + Vite · Designed & coded by Deeksha :)</p>
+        <p>Built with React + Vite · Designed & coded by Deeksha</p>
         <p className="footer-sub">© {new Date().getFullYear()} · All rights reserved</p>
       </footer>
     </section>

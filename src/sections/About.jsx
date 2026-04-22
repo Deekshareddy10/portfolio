@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import './About.css'
 
 const STATS = [
-  { value: '3.9',  label: 'GPA' },
+  { value: '3.8',  label: 'GPA' },
   { value: '15+', label: 'projects built' },
   { value: '6+',  label: 'years coding' },
   { value: '1',   label: 'publication' },
@@ -11,16 +11,23 @@ const STATS = [
 const EXPERIENCE = [
   {
     year: 'Mar 2025 – Present',
-    title: 'Software Engineer, Graduate Assistant',
+    title: 'Data Engineer',
     org: 'University of Colorado Denver',
-    desc: 'Engineered and maintained a scalable course registration system serving 100+ students, integrating ML models for student performance prediction and analytics to support data-driven academic decisions. Refactored Python codebases across multiple modules and mentored 60+ students in software best practices including code reviews, Git workflows, and debugging.',
+    desc: 'Designed and implemented end-to-end ETL pipelines using Python, SQL, and Apache Spark to ingest and transform institutional data at scale. Developed and scheduled automated data ingestion workflows using Apache Airflow, reducing manual processing time by 50%. Integrated Scikit-learn classification models for student performance prediction and contributed to data warehouse schema design following star-schema principles.',
     type: 'work',
   },
   {
     year: 'Mar 2025 – Jun 2025',
-    title: 'Web Accessibility Engineer',
+    title: 'Student Web Accessibility Representative',
     org: 'University of Colorado Denver',
-    desc: 'Resolved 10+ accessibility issues including semantic HTML, ARIA labels, and form validation to meet WCAG 2.1 AA & AAA standards using Siteimprove. Improved keyboard navigation and screen-reader support, resulting in improved search visibility and accessibility compliance for university web pages.',
+    desc: 'Resolved 10+ accessibility issues including semantic HTML, ARIA labels, and form validation to meet WCAG 2.1 AA & AAA standards using Siteimprove. Improved keyboard navigation and screen-reader support for university web pages.',
+    type: 'work',
+  },
+  {
+    year: 'Dec 2022 – May 2024',
+    title: 'Software Engineer',
+    org: 'Infor Pvt Ltd · Hyderabad, India',
+    desc: 'Developed and maintained scalable backend microservices for enterprise ERP applications using Python and Django, improving system reliability for 1,000+ business users. Designed versioned RESTful APIs, wrote complex SQL queries and stored procedures in PostgreSQL, and built CI/CD pipelines using Git and Jenkins. Wrote comprehensive unit and integration tests using pytest across critical service modules.',
     type: 'work',
   },
   {
@@ -34,17 +41,17 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    year: '2024 – May 2026',
+    year: 'Aug 2024 – May 2026',
     title: 'MS in Computer Science',
     org: 'University of Colorado Denver',
-    desc: 'Specialization in Machine Learning, AI, and Software Engineering. GPA 3.9. Conducting research in multimodal learning, LLMs, and computer vision.',
+    desc: 'Specialization in Machine Learning, AI, and Software Engineering. GPA 3.8. Conducting research in multimodal learning, LLMs, and computer vision.',
     type: 'edu',
   },
   {
-    year: '2020 – 2024',
-    title: 'BE in Computer Science & Engineering',
-    org: 'Malla Reddy College of Engineering and Technology',
-    desc: 'Graduated with honors. Foundation in algorithms, data structures, databases, and software development.',
+    year: 'Aug 2020 – May 2024',
+    title: 'BTech in Computer Science & Engineering',
+    org: 'Malla Reddy College of Engineering and Technology · Hyderabad, India',
+    desc: 'GPA 3.6. Foundation in algorithms, data structures, databases, and software development. Published research on deepfake detection (IRJMETS 2024).',
     type: 'edu',
   },
 ]
@@ -127,20 +134,22 @@ export default function About() {
           <h2 className="section-title reveal">About Me</h2>
 
           <p className="about-para reveal">
-            I design and implement end-to-end AI-powered systems — spanning computer vision pipelines,
-            multimodal learning, LLM applications, and scalable backend infrastructure.
-            My focus is on systems that are modular, reproducible, and built for production.
+            Software &amp; AI/ML Engineer experienced in building and deploying production-ready intelligent
+            systems — including RAG pipelines, multi-agent architectures, and multimodal models.
+            Before my MS, I spent 1.5 years as a Software Engineer at Infor Pvt Ltd building enterprise ERP
+            backend systems. Now I combine that engineering foundation with deep ML research at UCD.
           </p>
 
           <p className="about-para reveal">
             I've been coding for 6+ years and have shipped 15+ projects across the full stack — from
             research-grade ML models to deployed web apps. I go deep when something interests me:
             once I'm in a problem space, I read the papers, build the thing, and understand it end to end.
+            Seeking SWE, AI/ML, or Data Engineering roles.
           </p>
 
           <p className="about-para reveal">
-            Currently: Graduate Assistant + SWE by day, ISA President on campus, and perpetually
-            researching something at 2am.
+            Currently: Data Engineer at UCD by day, ISA President on campus, and perpetually
+            down a rabbit hole at 2am.
           </p>
 
           {/* Publication */}

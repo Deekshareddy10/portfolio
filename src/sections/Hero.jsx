@@ -11,7 +11,7 @@ const PHRASES = [
 ]
 
 const CHIPS = [
-  'GPA 3.9 · Graduating May 2026',
+  'GPA 3.8 · Graduating May 2026',
   'Published researcher · IRJMETS 2024',
   'Open to SWE, ML & AI roles',
   'ML + CV + Backend all three',
