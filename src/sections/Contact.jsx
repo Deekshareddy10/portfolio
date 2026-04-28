@@ -17,7 +17,7 @@ const SOCIALS = [
   {
     name: 'LinkedIn',
     handle: 'Deeksha Reddy Patlolla',
-    url: 'https://www.linkedin.com/in/deeksha-reddy-2aa378245/',
+    url: 'https://www.linkedin.com/in/deeksha-reddy-patlolla-2aa378245/',
     color: '#5a9478',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
