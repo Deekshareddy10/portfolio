@@ -186,7 +186,7 @@ function StickyNotes() {
               </button>
               <p className="note-text">{note.text}</p>
               <div className="note-meta">
-                <span className="note-author">— {note.author}</span>
+                <span className="note-author">{note.author}</span>
                 <span className="note-date">
                   {new Date(note.created_at).toLocaleDateString()}
                 </span>
@@ -198,7 +198,7 @@ function StickyNotes() {
 
       {!loading && notes.length === 0 && (
         <div className="notes-empty">
-          <span>No notes yet. Be the first! 📌</span>
+          <span>No notes yet. Be the first.</span>
         </div>
       )}
     </div>

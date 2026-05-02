@@ -319,7 +319,6 @@ export default function Interests() {
             </div>
           ) : (
             <div className="snake-idle">
-              <div className="idle-icon">🎮</div>
               <p>Waiting for the snake to grab a candy...</p>
             </div>
           )}

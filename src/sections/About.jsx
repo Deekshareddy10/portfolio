@@ -134,8 +134,8 @@ export default function About() {
           <h2 className="section-title reveal">About Me</h2>
 
           <p className="about-para reveal">
-            Software &amp; AI/ML Engineer experienced in building and deploying production-ready intelligent
-            systems — including RAG pipelines, multi-agent architectures, and multimodal models.
+            Software and AI/ML Engineer experienced in building and deploying production-ready intelligent
+            systems: RAG pipelines, multi-agent architectures, and multimodal models.
             Before my MS, I spent 1.5 years as a Software Engineer at Infor Pvt Ltd building enterprise ERP
             backend systems. Now I combine that engineering foundation with deep ML research at UCD.
           </p>
@@ -160,7 +160,7 @@ export default function About() {
             className="publication-block reveal"
             aria-label="View publication"
           >
-            <div className="pub-icon" aria-hidden="true">📄</div>
+            <div className="pub-icon" aria-hidden="true">↗</div>
             <div className="pub-content">
               <div className="pub-label">Publication · IRJMETS 2024</div>
               <div className="pub-title">{PUBLICATION.title}</div>
