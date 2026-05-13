@@ -27,7 +27,7 @@ const EXPERIENCE = [
     year: 'Dec 2022 – May 2024',
     title: 'Software Engineer',
     org: 'Infor Pvt Ltd · Hyderabad, India',
-    desc: 'Developed and maintained scalable backend microservices for enterprise ERP applications using Python and Django, improving system reliability for 1,000+ business users. Designed versioned RESTful APIs, wrote complex SQL queries and stored procedures in PostgreSQL, and built CI/CD pipelines using Git and Jenkins. Wrote comprehensive unit and integration tests using pytest across critical service modules.',
+    desc: 'Designed, developed, and maintained scalable Java/Spring Boot microservices and RESTful APIs for enterprise ERP applications, improving system reliability for 1,000+ business users. Wrote complex SQL queries and stored procedures in Azure SQL/PostgreSQL, reducing average query response time across high-traffic endpoints. Built and maintained CI/CD pipelines using Azure DevOps and GitHub Actions; containerized services with Docker and deployed to Azure App Service and AKS. Implemented OAuth2/OIDC authentication with Azure AD and wrote comprehensive unit and integration tests using JUnit and Mockito.',
     type: 'work',
   },
   {
@@ -144,7 +144,7 @@ export default function About() {
             I've been coding for 6+ years and have shipped 15+ projects across the full stack — from
             research-grade ML models to deployed web apps. I go deep when something interests me:
             once I'm in a problem space, I read the papers, build the thing, and understand it end to end.
-            Seeking SWE, AI/ML, or Data Engineering roles.
+            Seeking Full Stack, Java / AI Engineer roles.
           </p>
 
           <p className="about-para reveal">
