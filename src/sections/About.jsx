@@ -10,7 +10,7 @@ const STATS = [
 
 const EXPERIENCE = [
   {
-    year: 'Mar 2025 – Present',
+    year: 'Mar 2025 – May 2026',
     title: 'Data Engineer',
     org: 'University of Colorado Denver',
     desc: 'Designed and implemented end-to-end ETL pipelines using Python, SQL, and Apache Spark to ingest and transform institutional data at scale. Developed and scheduled automated data ingestion workflows using Apache Airflow, reducing manual processing time by 50%. Integrated Scikit-learn classification models for student performance prediction and contributed to data warehouse schema design following star-schema principles.',
@@ -24,8 +24,8 @@ const EXPERIENCE = [
     type: 'work',
   },
   {
-    year: 'Dec 2022 – May 2024',
-    title: 'Software Engineer',
+    year: 'Aug 2023 – May 2024',
+    title: 'Software Engineer Intern',
     org: 'Infor Pvt Ltd · Hyderabad, India',
     desc: 'Designed, developed, and maintained scalable Java/Spring Boot microservices and RESTful APIs for enterprise ERP applications, improving system reliability for 1,000+ business users. Wrote complex SQL queries and stored procedures in Azure SQL/PostgreSQL, reducing average query response time across high-traffic endpoints. Built and maintained CI/CD pipelines using Azure DevOps and GitHub Actions; containerized services with Docker and deployed to Azure App Service and AKS. Implemented OAuth2/OIDC authentication with Azure AD and wrote comprehensive unit and integration tests using JUnit and Mockito.',
     type: 'work',
@@ -136,8 +136,8 @@ export default function About() {
           <p className="about-para reveal">
             Software and AI/ML Engineer experienced in building and deploying production-ready intelligent
             systems: RAG pipelines, multi-agent architectures, and multimodal models.
-            Before my MS, I spent 1.5 years as a Software Engineer at Infor Pvt Ltd building enterprise ERP
-            backend systems. Now I combine that engineering foundation with deep ML research at UCD.
+            Before my MS, I interned as a Software Engineer at Infor Pvt Ltd building enterprise ERP
+            backend systems with Java/Spring Boot. I combine that engineering foundation with deep ML research at UCD.
           </p>
 
           <p className="about-para reveal">
@@ -148,7 +148,7 @@ export default function About() {
           </p>
 
           <p className="about-para reveal">
-            Currently: Data Engineer at UCD by day, ISA President on campus, and perpetually
+            Recently wrapped up as Data Engineer at UCD, still ISA President on campus, and perpetually
             down a rabbit hole at 2am.
           </p>
 
