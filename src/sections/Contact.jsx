@@ -63,8 +63,12 @@ function StickyNotes() {
 
   const handleTitleDoubleClick = () => {
     const secret = window.prompt('Admin access:')
-    if (secret && secret === import.meta.env.VITE_ADMIN_SECRET) {
+    if (secret === null) return
+    if (secret === import.meta.env.VITE_ADMIN_SECRET) {
       setIsAdmin(true)
+      alert('Admin mode enabled. You can now delete any note.')
+    } else {
+      alert('Incorrect password.')
     }
   }
 
@@ -127,7 +131,8 @@ function StickyNotes() {
       const updated = notes.filter((n) => n.id !== id)
       localStorage.setItem('portfolio-notes', JSON.stringify(updated))
     } else {
-      await supabase.from('notes').delete().eq('id', id)
+      const { error } = await supabase.from('notes').delete().eq('id', id)
+      if (error) console.error('Delete failed:', error.message)
     }
   }
 
