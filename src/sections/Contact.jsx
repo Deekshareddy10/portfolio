@@ -48,6 +48,25 @@ function StickyNotes() {
   const [authorName, setAuthorName] = useState('')
   const [loading, setLoading] = useState(true)
   const [posting, setPosting] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [noteTokens, setNoteTokens] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('portfolio-note-tokens') || '{}') }
+    catch { return {} }
+  })
+
+  const saveToken = (id) => {
+    const token = crypto.randomUUID()
+    const updated = { ...noteTokens, [id]: token }
+    setNoteTokens(updated)
+    localStorage.setItem('portfolio-note-tokens', JSON.stringify(updated))
+  }
+
+  const handleTitleDoubleClick = () => {
+    const secret = window.prompt('Admin access:')
+    if (secret && secret === import.meta.env.VITE_ADMIN_SECRET) {
+      setIsAdmin(true)
+    }
+  }
 
   // Load notes on mount
   useEffect(() => {
@@ -85,9 +104,13 @@ function StickyNotes() {
       const updated = [localNote, ...notes]
       setNotes(updated)
       localStorage.setItem('portfolio-notes', JSON.stringify(updated))
+      saveToken(localNote.id)
     } else {
       const { data, error } = await supabase.from('notes').insert([note]).select().single()
-      if (!error && data) setNotes((prev) => [data, ...prev])
+      if (!error && data) {
+        setNotes((prev) => [data, ...prev])
+        saveToken(data.id)
+      }
     }
     setText('')
     setAuthorName('')
@@ -96,6 +119,10 @@ function StickyNotes() {
 
   const deleteNote = async (id) => {
     setNotes((prev) => prev.filter((n) => n.id !== id))
+    const updatedTokens = { ...noteTokens }
+    delete updatedTokens[id]
+    setNoteTokens(updatedTokens)
+    localStorage.setItem('portfolio-note-tokens', JSON.stringify(updatedTokens))
     if (!supabase) {
       const updated = notes.filter((n) => n.id !== id)
       localStorage.setItem('portfolio-notes', JSON.stringify(updated))
@@ -107,7 +134,7 @@ function StickyNotes() {
   return (
     <div className="notes-section">
       <div className="notes-header">
-        <h3 className="notes-title">Leave a Note</h3>
+        <h3 className="notes-title" onDoubleClick={handleTitleDoubleClick} style={{ cursor: 'default' }}>Leave a Note</h3>
         <p className="notes-sub">
           Drop a message — a kind word, a thought, feedback about the site. I read every one.
         </p>
@@ -177,13 +204,15 @@ function StickyNotes() {
                 transform: `rotate(${note.rotation}deg)`,
               }}
             >
-              <button
-                className="note-delete"
-                onClick={() => deleteNote(note.id)}
-                aria-label="Delete note"
-              >
-                ×
-              </button>
+              {(noteTokens[note.id] || isAdmin) && (
+                <button
+                  className="note-delete"
+                  onClick={() => deleteNote(note.id)}
+                  aria-label="Delete note"
+                >
+                  ×
+                </button>
+              )}
               <p className="note-text">{note.text}</p>
               <div className="note-meta">
                 <span className="note-author">{note.author}</span>
