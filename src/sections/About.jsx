@@ -24,7 +24,7 @@ const EXPERIENCE = [
     type: 'work',
   },
   {
-    year: 'Dec 2022 – May 2024',
+    year: 'May 2023 – May 2024',
     title: 'Software Engineer',
     org: 'Infor Pvt Ltd · Hyderabad, India',
     desc: 'Designed, developed, and maintained scalable Java/Spring Boot microservices and RESTful APIs for enterprise ERP applications, improving system reliability for 1,000+ business users. Wrote complex SQL queries and stored procedures in Azure SQL/PostgreSQL, reducing average query response time across high-traffic endpoints. Built and maintained CI/CD pipelines using Azure DevOps and GitHub Actions; containerized services with Docker and deployed to Azure App Service and AKS. Implemented OAuth2/OIDC authentication with Azure AD and wrote comprehensive unit and integration tests using JUnit and Mockito.',
