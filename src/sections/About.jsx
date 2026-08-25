@@ -10,7 +10,7 @@ const STATS = [
 
 const EXPERIENCE = [
   {
-    year: 'Mar 2025 – May 2026',
+    year: 'Nov 2024 – May 2026',
     title: 'Data Engineer',
     org: 'University of Colorado Denver',
     desc: 'Designed and implemented end-to-end ETL pipelines using Python, SQL, and Apache Spark to ingest and transform institutional data at scale. Developed and scheduled automated data ingestion workflows using Apache Airflow, reducing manual processing time by 50%. Integrated Scikit-learn classification models for student performance prediction and contributed to data warehouse schema design following star-schema principles.',
